@@ -1,3 +1,4 @@
+![Build Status](https://img.shields.io/travis/user/repo.svg)
 # Data Structures Part A
 
 ## General Description
