@@ -163,6 +163,25 @@ where `n` is the number of elements in the user list, `s_i` and `w_i`,i ∈ {1, 
 user, respectively. `mid_i,j`, i ∈ {1, …, n},j ∈ {1, …, s_i}, is the identifier of the movie at the \( j \)-th node in the recommended movies list for the \( i \)-
 th user, and `mid'_i,j`, i ∈ {1, …, n}, j ∈ {1, …, w_i} \), is the identifier of the movie at the \( j \)-th node in the watch history stack for the \( i \)-th user.
 
+## Running the Code
+
+To compile and run the project, follow these steps:
+
+### Using the Makefile
+
+1. **Open your terminal.**
+2. **Navigate to the project directory** where your files are located.
+3. **Compile the project** by running the following command:
+   ```bash
+   make
+
+This will compile the code according to the instructions in the Makefile and create an executable file, likely named cs240StreamingService.
+Run the compiled program with an input file by using the following command:
+
+```./cs240StreamingService <input_file>```
+
+Replace <input_file> with the name of your desired input file (e.g., ```./TestFiles/test_U10M30```).
+
 
 
 
