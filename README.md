@@ -181,10 +181,8 @@ To compile and run the project, follow these steps:
 where <input_file> is the name of your desired input file (e.g., ```./TestFiles/test_U10M30```).
 
 
-
-
-
-
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 
