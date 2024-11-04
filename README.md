@@ -16,12 +16,12 @@ Each user and movie has a unique identifier and is associated with relevant stru
 
 ## Features
 
--**User Registration & Management:** Add and remove users from the service.
--**Movie Management:** Add movies to a catalog, categorize them, and manage their availability.
--**Viewing History:** Maintain a stack-based watch history for each user.
--**Movie Suggestions:** Generate recommendations based on other users’ watch histories.
--**Filtered Searches:** Allow users to search for movies by category and release year.
--**Data Output:** Print summaries of movies and user information.
+- **User Registration & Management:** Add and remove users from the service.
+- **Movie Management:** Add movies to a catalog, categorize them, and manage their availability.
+- **Viewing History:** Maintain a stack-based watch history for each user.
+- **Movie Suggestions:** Generate recommendations based on other users’ watch histories.
+- **Filtered Searches:** Allow users to search for movies by category and release year.
+- **Data Output:** Print summaries of movies and user information.
 
 ## Data Structures
 **Category List (Array):** Array of six linked lists, each representing a genre. Movies in each genre are stored in sorted order based on their unique identifier (mid).
