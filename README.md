@@ -51,6 +51,7 @@ A ```Register User``` event, in which a new user with identifier ```uid``` regis
 the identifier ```uid``` in the service. We then implement an insertion algorithm to add the new user to the user list. Our algorithm has a time complexity of O(1). The fields 
 ```suggestedHead```, ```suggestedTail```, and ```watchHistory``` for the new user are initialized to ```NULL```. After executing this event, the program prints the following information:
 
+![Alt-txt](figures/R_Event.png)
 
 where `n` is the number of nodes in the user list, and for each i ∈ {1, …, n}, `<uid_i>` is the identifier of the user corresponding to the i-th node in the list.
 
