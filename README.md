@@ -25,6 +25,11 @@ Each user and movie has a unique identifier and is associated with relevant stru
 - **Data Output:** Print summaries of movies and user information.
 
 ## Data Structures
-**Category List (Array):** Array of six linked lists, each representing a genre. Movies in each genre are stored in sorted order based on their unique identifier (mid).
+- **Category List (Array):** Array of six linked lists, each representing a genre. Movies in each genre are stored in sorted order based on their unique identifier (mid).
+- **User List (Linked List):** An unsorted singly linked list containing all registered users.
+- **Watch History (Stack):** A stack structure to maintain each user’s watch history, storing the movies they have watched.
+- **Suggested Movies List (Doubly Linked List):** A list to maintain suggested movies for each user.
+- **New Movies List (Linked List):** Temporarily holds newly added movies until they are assigned to a category.
+
 
 
