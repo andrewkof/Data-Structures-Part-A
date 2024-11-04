@@ -12,6 +12,7 @@ Movies are categorized into six genres:
 - Romance
 - Documentary
 - Comedy
+  
 Each user and movie has a unique identifier and is associated with relevant structures that allow for efficient data manipulation and retrieval.
 
 ## Features
