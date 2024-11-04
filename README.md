@@ -1,4 +1,6 @@
 ![Build Status](https://img.shields.io/travis/user/repo.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 # Data Structures Part A
 
 ## General Description
