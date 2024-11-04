@@ -1,4 +1,4 @@
-# Data Structures Phase 1
+# Data Structures Part A
 
 ## General Description
 In this project, Ι implement a simplified movie streaming service. The service offers movies organized into different thematic categories. Users can register on the platform, watch movies 
@@ -33,6 +33,24 @@ The sentinel node of the user list is a node used for the correct management of 
 hypothetical program execution is shown in Figure 2.
 
 ![Alt-txt](figures/Figure2.png)
+
+
+To implement the doubly linked list of recommended movies for the user, we use the ```struct suggested_movie``` structure, which has the following fields:
+- **info:** A field of type ```struct movie_info```, which contains information about the movie.
+- **prev:** A pointer of type ```struct suggested_movie```, which points to the previous element in the recommended movies list.
+- **next:** A pointer of type ```struct suggested_movie```, which points to the next element in the recommended movies list.
+
+# Program Operation
+The program you will implement should be executed with the following command: 
+```<executable> <input file>```
+where ```<executable>``` is the name of the executable (e.g., ```cs240StreamingService```) and ```<input file>``` is the name of an input file (e.g., testFile) a file that contains one event per line. The events need to be implemented in your program and follow one of the following formats:
+
+# Event R (– R <uid>)
+
+A ```Register User``` event, in which a new user with identifier <uid> registers in the service. We first need to traverse the user list to check that there is no existing user with the 
+identifier <uid> in the service. If this is confirmed, we then implement an insertion algorithm to add the new user to the user list.
+
+
 
 
 
