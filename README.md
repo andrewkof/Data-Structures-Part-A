@@ -11,8 +11,8 @@ category and has a unique identifier. The categorization of movies will be imple
 (of type ```struct movie *```) pointing to the first element of the linked list of movies for that particular category. This list is a singly linked list, sorted in ascending order based on the 
 movie identifier (```mid```). A node in this list represents a movie within the category, defined by a structure (```struct movie```) with the following fields:
 
-- **info:** A helper structure of type struct movie_info that describes the available information for a movie. Its fields are as follows:
-- - something
+- **info:** A helper structure of type ```struct movie_info``` that describes the available information for a movie. Its fields are as follows:
+   - something
 
 
 
