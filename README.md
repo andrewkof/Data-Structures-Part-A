@@ -25,7 +25,16 @@ in this list are implemented using the ```struct new_movie``` structure, which h
 - **next:** A pointer (of type ```struct new_movie```) that points to the next node in the new releases list.
 
 Figure 1 shows the category array in a hypothetical execution of the program. It is a fixed-size array with 6 positions, each containing a list of movies.
+
 ![Alt-txt](figures/Figure1.png)
+
+The sentinel node of the user list is a node used for the correct management of the list (and is therefore an auxiliary node). It is of type ```struct user```, but its ```uid``` is set to 
+-1. The pointers ```suggestedHead```, ```suggestedTail```, ```watchHistory```, and ```next``` for each user are initially set to ```NULL```. The possible structure of the user list in a 
+hypothetical program execution is shown in Figure 2.
+
+![Alt-txt](figures/Figure2.png)
+
+
 
 
 
