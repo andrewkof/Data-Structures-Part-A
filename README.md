@@ -58,7 +58,7 @@ where `n` is the number of nodes in the user list, and for each i ∈ {1, …, n
 ## Event U (U `<uid>`)
 
 An **Unregister User** event, in which the user with identifier <uid> leaves the service. We first need to clear the user’s doubly linked list of recommended movies and their watch history 
-stack by removing all their elements (if they exist) before removing the user from the list. After executing such an event, the program should print the following information:
+stack by removing all their elements (if they exist) before removing the user from the list. After executing such an event, the program prints the following information:
 
 ![Alt-txt](figures/U_Event.png)
 
@@ -68,18 +68,35 @@ where `n` is the number of nodes in the user list, and for each i ∈ {1, …, n
 
 An **Add New Movie** event, in which a movie with identifier `<mid>`, category `<category>`, and release year `<year>` is added to the service. We insert the movie into the sorted 
 new releases list, not the category array list. The new releases list should remain sorted (in ascending order based on the movie identifier) after each insertion. After executing this 
-event, the program should print the following information:
+event, the program prints the following information:
 
 ![Alt-txt](figures/A_Event.png)
 
 where `n` is the number of elements in the new releases list, and `mid_i`, `category_i`, `year_i`, \( i \in \{1, …, n\} \), represent the identifier, category, and release year of the movie corresponding to the \( i \)-th node in the new releases list.
 
 
+## Event D
+
+A **Distribute New Movies** event, in which the movies from the new releases list are assigned to the lists in the category array based on their category. This event is implemented in 
+time complexity of \( O(n) \), where `n` is the size of the new releases list. We need to traverse the new releases list once, removing each movie encountered and adding it to the 
+appropriate list in the category array. By the end of this process, the new releases list should be empty, and the lists in the category array should be sorted in ascending order based on 
+the movie identifier. After executing this event, the program prints the following information:
+
+![Alt-txt](figures/D_Event.png)
+
+where `n1`, `n2`, …, `n6` are the sizes of the six category lists, and `<mid_i,j>` is the identifier of the movie corresponding to the \( j \)-th node in the movie list for category \( i \).
 
 
+## Event W (W `<uid> <mid>`)
 
+A **User Watches Movie** event, in which the user with identifier `<uid>` watches the movie with identifier `<mid>`. First, we locate the movie information (`struct movie_info`) 
+by searching through the lists in the category array, as well as locate the user by searching the user list. Next, we create a new `struct movie` and push it onto the user’s watch history 
+stack. After executing this event, the program prints the following information:
 
+![Alt-txt](figures/W_Event.png)
 
+where `n` is the number of elements in the watch history stack of the user `<uid>`, and `mid_i`, \( i \in \{1, …, n\} \), is the identifier of the movie corresponding to the \( i \)-th 
+element in the stack.
 
 
 
