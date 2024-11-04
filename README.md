@@ -64,7 +64,15 @@ stack by removing all their elements (if they exist) before removing the user fr
 
 where `n` is the number of nodes in the user list, and for each i ∈ {1, …, n}, `<uid_i>` is the identifier of the user corresponding to the i-th node in the list.
 
+## Event A (A `<mid>``<category>``<year>`)
 
+An **Add New Movie** event, in which a movie with identifier `<mid>`, category `<category>`, and release year `<year>` is added to the service. We insert the movie into the sorted 
+new releases list, not the category array list. The new releases list should remain sorted (in ascending order based on the movie identifier) after each insertion. After executing this 
+event, the program should print the following information:
+
+![Alt-txt](figures/A_Event.png)
+
+where `n` is the number of elements in the new releases list, and `mid_i`, `category_i`, `year_i`, \( i \in \{1, …, n\} \), represent the identifier, category, and release year of the movie corresponding to the \( i \)-th node in the new releases list.
 
 
 
