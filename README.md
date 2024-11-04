@@ -98,6 +98,74 @@ stack. After executing this event, the program prints the following information:
 where `n` is the number of elements in the watch history stack of the user `<uid>`, and `mid_i`, \( i \in \{1, …, n\} \), is the identifier of the movie corresponding to the \( i \)-th 
 element in the stack.
 
+## Event S (S `<uid>`)
+
+A **Suggest Movies to User** event, in which the user with identifier `<uid>` receives movie suggestions from the service based on the watch history of other users. For each user in the user list — except for the user `<uid>` — we remove one movie from the top of their watch history stack (if it exists) and add it to the doubly linked list of recommended movies for the user `<uid>`. 
+
+These additions should alternate between the start and the end of the list, as described below:
+- The first item is inserted as the first element, with the `suggestedHead` pointer pointing to it.
+- The second item is inserted as the last element, with the `suggestedTail` pointer pointing to it.
+- The \( (2i+1) \)-th item, \( i > 0 \), is inserted after the \( (2i-1) \)-th item, while the \( (2i) \)-th item, \( i > 1 \), is inserted before the \( (2i-2) \)-th item.
+
+Thus, the third item is added after the first, the fourth item before the second, and so on.
+This process is executed with a time complexity of \( O(n) \), where `n` is the number of users in the application. After executing this event, the program prints the following 
+information:
+
+![Alt-txt](figures/S_Event.png)
+
+where `n` is the number of elements in the recommended movies list for the user `<uid>`, and `mid_i`, \( i \in \{1, …, n\} \), is the identifier of the movie corresponding to the \( i \)-
+th node in the recommended movies list.
+
+## Event F (F `<uid> <category1> <category2> <year>`)
+
+A **Filtered Movie Search** event, in which the user `<uid>` requests that the service recommend movies belonging to either of two categories, `<category1>` or `<category2>`, and with a 
+release year greater than or equal to `<year>`. We traverse the movie lists for both categories in the category array, identify movies with the appropriate release year, and merge 
+them into a new doubly linked list. 
+
+This list is sorted in ascending order by movie identifier, like the category lists, and appended to the end of the user's existing recommended movies list (if it is not empty). If 
+the user’s recommended movies list is empty, it will be replaced by the new list. We do not remove items from the two category lists; instead, for each matching movie, we create a new 
+node in the user's recommended movies list. This process is executed with a time complexity of \( O(n + m) \), where `n` and `m` are the number of elements in the two category lists being 
+traversed, respectively. After executing this event, the program should print the following information:
+
+![Alt-txt](figures/F_Event.png)
+
+where `n` is the number of elements in the recommended movies list for the user `<uid>`, and `mid_i`, \( i \in \{1, …, n\} \), is the identifier of the movie corresponding to the \( i \)-
+th node in the recommended movies list.
+
+## Event T (T `<mid>`)
+
+A **Take Off Movie** event, in which the movie `<mid>` is removed from the service. We need to remove the movie from any user’s recommended movies list in which it may be present, as well 
+as from the appropriate category list in the category array. After executing this event, the program prints the following information:
+
+![Alt-txt](figures/T_Event.png)
+
+
+where `n` is the number of users who had the movie `<mid>` in their recommended movies list, `uid_i`, \( i \in \{1, …, n\} \), is the identifier of the \( i \)-th user in the user list 
+who had the movie in their recommendations, `<category>` is the category to which the movie belonged, `k` is the new size of the category list to which `<mid>` belonged after its removal, 
+and `mid_j`, \( j \in \{1, …, k\} \), is the identifier of the \( j \)-th movie in the category list.
+
+## Event M
+
+A **Print Movies** event, in which the program prints information about all the movies in the lists of the category array. After executing such an event, the program prints 
+the following information:
+
+![Alt-txt](figures/M_Event.png)
+
+where `n1`, `n2`, …, `n6` are the sizes of the six category lists, and `<mid_i,j>` is the identifier of the movie corresponding to the \( j \)-th node in the \( i \)-th category list.
+
+## Event P
+
+A **Print Users** event, in which the program prints information about each user in the user list. After executing such an event, the program prints the following information:
+
+![Alt-txt](figures/P_Event.png)
+
+where `n` is the number of elements in the user list, `s_i` and `w_i`, \( i \in \{1, …, n\} \), are the sizes of the recommended movies list and the watch history stack for the \( i \)-th 
+user, respectively. `mid_i,j`, \( i \in \{1, …, n\} \), \( j \in \{1, ... , s_i\} \), is the identifier of the movie at the \( j \)-th node in the recommended movies list for the \( i \)-
+th user, and `mid'_i,j`, \( i \in \{1, …, n\} \), \( j \in \{1, ... , w_i\} \), is the identifier of the movie at the \( j \)-th node in the watch history stack for the \( i \)-th user.
+
+
+
+
 
 
 
