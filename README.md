@@ -72,7 +72,7 @@ event, the program prints the following information:
 
 ![Alt-txt](figures/A_Event.png)
 
-where `n` is the number of elements in the new releases list, and `mid_i`, `category_i`, `year_i`, \( i \in \{1, …, n\} \), represent the identifier, category, and release year of the movie corresponding to the \( i \)-th node in the new releases list.
+where `n` is the number of elements in the new releases list, and `mid_i`, `category_i`, `year_i`,i ∈ {1, …, n}, represent the identifier, category, and release year of the movie corresponding to the \( i \)-th node in the new releases list.
 
 
 ## Event D
@@ -95,7 +95,7 @@ stack. After executing this event, the program prints the following information:
 
 ![Alt-txt](figures/W_Event.png)
 
-where `n` is the number of elements in the watch history stack of the user `<uid>`, and `mid_i`, \( i \in \{1, …, n\} \), is the identifier of the movie corresponding to the \( i \)-th 
+where `n` is the number of elements in the watch history stack of the user `<uid>`, and `mid_i`, i ∈ {1, …, n}, is the identifier of the movie corresponding to the \( i \)-th 
 element in the stack.
 
 ## Event S (S `<uid>`)
@@ -113,7 +113,7 @@ information:
 
 ![Alt-txt](figures/S_Event.png)
 
-where `n` is the number of elements in the recommended movies list for the user `<uid>`, and `mid_i`, \( i \in \{1, …, n\} \), is the identifier of the movie corresponding to the \( i \)-
+where `n` is the number of elements in the recommended movies list for the user `<uid>`, and `mid_i`, i ∈ {1, …, n}, is the identifier of the movie corresponding to the \( i \)-
 th node in the recommended movies list.
 
 ## Event F (F `<uid> <category1> <category2> <year>`)
@@ -129,7 +129,7 @@ traversed, respectively. After executing this event, the program should print th
 
 ![Alt-txt](figures/F_Event.png)
 
-where `n` is the number of elements in the recommended movies list for the user `<uid>`, and `mid_i`, \( i \in \{1, …, n\} \), is the identifier of the movie corresponding to the \( i \)-
+where `n` is the number of elements in the recommended movies list for the user `<uid>`, and `mid_i`, i ∈ {1, …, n}, is the identifier of the movie corresponding to the \( i \)-
 th node in the recommended movies list.
 
 ## Event T (T `<mid>`)
@@ -140,9 +140,9 @@ as from the appropriate category list in the category array. After executing thi
 ![Alt-txt](figures/T_Event.png)
 
 
-where `n` is the number of users who had the movie `<mid>` in their recommended movies list, `uid_i`, \( i \in \{1, …, n\} \), is the identifier of the \( i \)-th user in the user list 
+where `n` is the number of users who had the movie `<mid>` in their recommended movies list, `uid_i`, i ∈ {1, …, n}, is the identifier of the \( i \)-th user in the user list 
 who had the movie in their recommendations, `<category>` is the category to which the movie belonged, `k` is the new size of the category list to which `<mid>` belonged after its removal, 
-and `mid_j`, \( j \in \{1, …, k\} \), is the identifier of the \( j \)-th movie in the category list.
+and `mid_j`, j ∈ {1, …, k}, is the identifier of the \( j \)-th movie in the category list.
 
 ## Event M
 
@@ -159,9 +159,9 @@ A **Print Users** event, in which the program prints information about each user
 
 ![Alt-txt](figures/P_Event.png)
 
-where `n` is the number of elements in the user list, `s_i` and `w_i`, \( i \in \{1, …, n\} \), are the sizes of the recommended movies list and the watch history stack for the \( i \)-th 
-user, respectively. `mid_i,j`, \( i \in \{1, …, n\} \), \( j \in \{1, ... , s_i\} \), is the identifier of the movie at the \( j \)-th node in the recommended movies list for the \( i \)-
-th user, and `mid'_i,j`, \( i \in \{1, …, n\} \), \( j \in \{1, ... , w_i\} \), is the identifier of the movie at the \( j \)-th node in the watch history stack for the \( i \)-th user.
+where `n` is the number of elements in the user list, `s_i` and `w_i`,i ∈ {1, …, n}, are the sizes of the recommended movies list and the watch history stack for the \( i \)-th 
+user, respectively. `mid_i,j`, i ∈ {1, …, n},j ∈ {1, …, s_i}, is the identifier of the movie at the \( j \)-th node in the recommended movies list for the \( i \)-
+th user, and `mid'_i,j`, i ∈ {1, …, n}, j ∈ {1, …, w_i} \), is the identifier of the movie at the \( j \)-th node in the watch history stack for the \( i \)-th user.
 
 
 
