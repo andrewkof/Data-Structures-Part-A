@@ -1,35 +1,16 @@
 # Data Structures Phase 1
 
-## Project Description
+## General Description
+In this project, Ι implement a simplified movie streaming service. The service offers movies organized into different thematic categories. Users can register on the platform, watch movies 
+and add them to their watch history, receive movie recommendations based on the watch history of other users, and perform filtered searches across movie categories.
 
-This project is a basic implementation of a streaming service. It manages movie records across different categories, tracks user activity, and makes movie recommendations. The primary 
-focus is on the efficient use of data structures, including linked lists, stacks, and arrays.
+## Detailed Description of the Required Implementation
 
-Movies are categorized into six genres:
-- Horror
-- Science-Fiction
-- Drama
-- Romance
-- Documentary
-- Comedy
-  
-Each user and movie has a unique identifier and is associated with relevant structures that allow for efficient data manipulation and retrieval.
+The service you will implement organizes its available movies into six thematic categories: Horror, Science Fiction, Drama, Romance, Documentary, and Comedy. Each movie belongs to only one 
+category and has a unique identifier. The categorization of movies will be implemented using a six-position array, called the category array. Each position in the array contains a pointer 
+(of type `struct movie *`) pointing to the first element of the linked list of movies for that particular category. This list is a singly linked list, sorted in ascending order based on the 
+movie identifier (mid). A node in this list represents a movie within the category, defined by a structure (struct movie) with the following fields:
 
-## Features
-
-- **User Registration & Management:** Add and remove users from the service.
-- **Movie Management:** Add movies to a catalog, categorize them, and manage their availability.
-- **Viewing History:** Maintain a stack-based watch history for each user.
-- **Movie Suggestions:** Generate recommendations based on other users’ watch histories.
-- **Filtered Searches:** Allow users to search for movies by category and release year.
-- **Data Output:** Print summaries of movies and user information.
-
-## Data Structures
-- **Category List (Array):** Array of six linked lists, each representing a genre. Movies in each genre are stored in sorted order based on their unique identifier (mid).
-- **User List (Linked List):** An unsorted singly linked list containing all registered users.
-- **Watch History (Stack):** A stack structure to maintain each user’s watch history, storing the movies they have watched.
-- **Suggested Movies List (Doubly Linked List):** A list to maintain suggested movies for each user.
-- **New Movies List (Linked List):** Temporarily holds newly added movies until they are assigned to a category.
 
 
 
