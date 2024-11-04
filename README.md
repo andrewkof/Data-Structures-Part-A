@@ -25,7 +25,7 @@ in this list are implemented using the ```struct new_movie``` structure, which h
 - **next:** A pointer (of type ```struct new_movie```) that points to the next node in the new releases list.
 
 Figure 1 shows the category array in a hypothetical execution of the program. It is a fixed-size array with 6 positions, each containing a list of movies.
-![Alt-txt](/figues/figure.png)
+![Alt-txt](/figues/Screenshot 2024-11-04 at 1.48.01 PM.png)
 
 
 
