@@ -1,7 +1,7 @@
 # Data Structures Part A
 
 ## General Description
-the aim of this project is to simulate a streaming service. The service offers movies organized into different thematic categories. Users can register on the platform, watch movies 
+The aim of this project is to simulate a streaming service. The service offers movies organized into different thematic categories. Users can register on the platform, watch movies 
 and add them to their watch history, receive movie recommendations based on the watch history of other users, and perform filtered searches across movie categories.
 
 ## Detailed Description of the Implementation
