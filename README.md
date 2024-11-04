@@ -45,15 +45,28 @@ The program you will implement should be executed with the following command:
 ```<executable> <input file>```
 where ```<executable>``` is the name of the executable (e.g., ```cs240StreamingService```) and ```<input file>``` is the name of an input file (e.g., testFile) a file that contains one event per line. The events need to be implemented in your program and follow one of the following formats:
 
-# Event R (– R <uid>)
+## Event R (R `<uid>`)
 
-A ```Register User``` event, in which a new user with identifier ```uid``` registers in the service. We first need to traverse the user list to check that there is no existing user with 
+A **Register User** event, in which a new user with identifier ```uid``` registers in the service. We first need to traverse the user list to check that there is no existing user with 
 the identifier ```uid``` in the service. We then implement an insertion algorithm to add the new user to the user list. Our algorithm has a time complexity of O(1). The fields 
 ```suggestedHead```, ```suggestedTail```, and ```watchHistory``` for the new user are initialized to ```NULL```. After executing this event, the program prints the following information:
 
 ![Alt-txt](figures/R_Event.png)
 
 where `n` is the number of nodes in the user list, and for each i ∈ {1, …, n}, `<uid_i>` is the identifier of the user corresponding to the i-th node in the list.
+
+## Event U (U `<uid>`)
+
+An **Unregister User** event, in which the user with identifier <uid> leaves the service. We first need to clear the user’s doubly linked list of recommended movies and their watch history 
+stack by removing all their elements (if they exist) before removing the user from the list. After executing such an event, the program should print the following information:
+
+![Alt-txt](figures/U_Event.png)
+
+where `n` is the number of nodes in the user list, and for each i ∈ {1, …, n}, `<uid_i>` is the identifier of the user corresponding to the i-th node in the list.
+
+
+
+
 
 
 
