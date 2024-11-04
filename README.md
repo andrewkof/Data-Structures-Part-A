@@ -174,9 +174,9 @@ To compile and run the project, follow these steps:
 3. **Compile the project** by running the following command:
    ```bash
    make
-4 **Run:** 
-   ./cs240StreamingService <input_file>```
-   where <input_file> is the name of your desired input file (e.g., ```./TestFiles/test_U10M30```).
+4. ./cs240StreamingService <input_file>```
+
+where <input_file> is the name of your desired input file (e.g., ```./TestFiles/test_U10M30```).
 
 
 
