@@ -1,4 +1,4 @@
-![Build Status](https://img.shields.io/travis/andrewkwf/my-awesome-project.svg)
+![Build Status](https://img.shields.io/travis/andrewkwf/Data-Structures-Part-A.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 # Data Structures Part A
