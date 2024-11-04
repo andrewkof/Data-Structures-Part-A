@@ -174,13 +174,9 @@ To compile and run the project, follow these steps:
 3. **Compile the project** by running the following command:
    ```bash
    make
-
-This will compile the code according to the instructions in the Makefile and create an executable file, likely named cs240StreamingService.
-Run the compiled program with an input file by using the following command:
-
-```./cs240StreamingService <input_file>```
-
-Replace <input_file> with the name of your desired input file (e.g., ```./TestFiles/test_U10M30```).
+4 **Run:** 
+   ./cs240StreamingService <input_file>```
+   where <input_file> is the name of your desired input file (e.g., ```./TestFiles/test_U10M30```).
 
 
 
